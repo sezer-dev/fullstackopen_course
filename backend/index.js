@@ -11,7 +11,7 @@ const requestLogger = (request,response,next) => {
 }
 //Middleware nutzen:
 app.use(express.json()) //Nötig, damit der event handler das json objekt aus dem request body lesen kann
-app.use(cors())
+//app.use(cors()) nicht mehr nötig, wenn frontend und backend vom selben ort aus gehostet werden
 app.use(requestLogger) //muss man expres.json aufgerufen werden, damit body richtig funktioniert
 app.use(express.static('dist')) //Das speichern vom Frontend als distributed version mit dem dist ordner erlaubt 
 //es nun mittels express.static('dist') dass beim hochfahren des servers das backend auch direkt das Frontend mit hochlädt
