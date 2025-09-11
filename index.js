@@ -13,6 +13,7 @@ const requestLogger = (request,response,next) => {
 app.use(express.json()) //Nötig, damit der event handler das json objekt aus dem request body lesen kann
 app.use(cors())
 app.use(requestLogger) //muss man expres.json aufgerufen werden, damit body richtig funktioniert
+app.use(express.static('dist'))
 
 let notes = [
   {
