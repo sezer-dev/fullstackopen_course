@@ -1,0 +1,19 @@
+{
+  "name": "nodejsexpress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../fullstackopen_course",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
