@@ -4,7 +4,7 @@ mongoose.set('strictQuery', false);
 
 const url = process.env.MONGODB_URI //Nutze Enviorment Varibalen zur URL Speicherung
 
-console.log('connevtion to', url)
+console.log('connection to', url)
 
 mongoose.connect(url).then(result => {
     console.log('connected to MongoDB')
